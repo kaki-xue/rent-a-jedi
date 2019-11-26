@@ -1,7 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  username: MyString
+
+  open_id: MyString
 
 two:
-  username: MyString
+  open_id: MyString
+
