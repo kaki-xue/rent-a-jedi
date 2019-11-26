@@ -9,14 +9,16 @@
 Alien.destroy_all
 User.destroy_all
 
-tom = User.new(username: "Tom")
-tom.save
-
-sarah = User.new(username: "Sarah")
+sarah = User.new(open_id: "sarah")
 sarah.save
 
-kaki = User.new(username: "Kaki")
+tom = User.new(open_id: "tom")
+tom.save
+
+kaki = User.new(open_id: "kaki")
 kaki.save
+
+
 
 yoda = Alien.new(name: "Yoda", image: 'https://lumiere-a.akamaihd.net/v1/images/Yoda-Retina_2a7ecc26.jpeg?region=0%2C0%2C1536%2C768', skill: 'wise', price_per_day: 15000, description: 'Yoda has been considered the greatest Jedi Master of the era by many, he was one of the most skilled users of the Force in the history of the entire galaxy. Yoda was so strong in the Force that he has demonstrated the ability to effortlessly disarm powerful opponents like the Dark Jedi Asajj Ventress with a simple gesture. ', user_id: sarah.id)
 yoda.save
