@@ -3,7 +3,19 @@ Rails.application.routes.draw do
  post '/login', to: 'login#login'
  namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :aliens, only: [ :index, :show, :update, :create]
+      resources :aliens, only: [:index, :show, :update, :create, :destroy]
+    end
+  end
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :users, only: [:index, :show, :create, :destroy]
+    end
+  end
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :bookings, only: [:index, :show, :update, :create, :destroy]
     end
   end
 

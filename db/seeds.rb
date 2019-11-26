@@ -18,8 +18,6 @@ tom.save
 kaki = User.new(open_id: "kaki")
 kaki.save
 
-
-
 yoda = Alien.new(name: "Yoda", image: 'https://lumiere-a.akamaihd.net/v1/images/Yoda-Retina_2a7ecc26.jpeg?region=0%2C0%2C1536%2C768', skill: 'wise', price_per_day: 15000, description: 'Yoda has been considered the greatest Jedi Master of the era by many, he was one of the most skilled users of the Force in the history of the entire galaxy. Yoda was so strong in the Force that he has demonstrated the ability to effortlessly disarm powerful opponents like the Dark Jedi Asajj Ventress with a simple gesture. ', user_id: sarah.id)
 yoda.save
 
@@ -31,5 +29,16 @@ r2d2 = Alien.new(name: "R2-D2", image: 'https://images-na.ssl-images-amazon.com/
 
 r2d2.save
 
+3.times do
+  booking = Booking.new(
+  user_id: [sarah.id, tom.id, kaki.id].sample,
+  alien_id: [yoda.id, kaki.id, yoda.id].sample,
+  start_date: ["2019-11-03", "2019-11-07", "2019-11-08"].sample,
+  end_date: ["2019-11-09", "2019-11-10", "2019-11-11"].sample
+)
+  booking.save!
+end
+
 puts "i created #{User.count} users"
 puts "i created #{Alien.count} aliens!"
+puts "i created #{Booking.count} bookings!"
