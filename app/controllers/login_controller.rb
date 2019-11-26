@@ -1,5 +1,6 @@
 class LoginController < ApplicationController
 
+
 URL = "https://api.weixin.qq.com/sns/jscode2session".freeze
 
 

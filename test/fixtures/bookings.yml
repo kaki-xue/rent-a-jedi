@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alien: one
+  user: one
+  start_date: 2019-11-26 11:19:47
+  end_date: 2019-11-26 11:19:47
+
+two:
+  alien: two
+  user: two
+  start_date: 2019-11-26 11:19:47
+  end_date: 2019-11-26 11:19:47
