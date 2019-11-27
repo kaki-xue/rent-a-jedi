@@ -29,7 +29,7 @@ r2d2 = Alien.new(name: "R2-D2", image: 'https://images-na.ssl-images-amazon.com/
 
 r2d2.save
 
-chewbecca = Alien.new(name: "Chewbecca", image: 'https://images-na.ssl-images-amazon.com/images/I/712Lwo7hMoL._SL1500_.jpg', skill: 'hariy hugs', price_per_day: 3000000, description: 'Chewbacca is a Wookiee from the forest planet of Kashyyk. Born 200 years before the Battle of Yavin. Chewbacca was the son of Attichitcuk. Growing up, Chewbacca was known for his sense of adventure, always exploring different parts of his homeworld, including the dangerous Shadowlands. ', user_id: sarah.id)
+chewbecca = Alien.new(name: "Chewbecca", image: 'https://pbs.twimg.com/profile_images/2360695492/Chewbacca_by_DryJack_400x400.jpg', skill: 'hariy hugs', price_per_day: 3000000, description: 'Chewbacca is a Wookiee from the forest planet of Kashyyk. Born 200 years before the Battle of Yavin. Chewbacca was the son of Attichitcuk. Growing up, Chewbacca was known for his sense of adventure, always exploring different parts of his homeworld, including the dangerous Shadowlands. ', user_id: sarah.id)
 
 chewbecca.save
 
