@@ -8,6 +8,7 @@
 
 Alien.destroy_all
 User.destroy_all
+Booking.destroy_all
 
 sarah = User.new(open_id: "sarah")
 sarah.save
