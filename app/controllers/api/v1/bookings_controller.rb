@@ -3,7 +3,8 @@ class Api::V1::BookingsController < Api::V1::BaseController
 before_action :set_booking, only: [:show, :update, :destroy]
 
   def index
-   @bookings = Booking.all
+
+   @bookings = Booking.where(user_id: params[:user_id])
   end
 
   def show
