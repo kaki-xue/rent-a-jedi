@@ -25,9 +25,25 @@ luke = Alien.new(name: "Luke Skywalker", image: 'https://fsmedia.imgix.net/1e/c0
 
 luke.save
 
-r2d2 = Alien.new(name: "R2-D2", image: 'https://images-na.ssl-images-amazon.com/images/I/712Lwo7hMoL._SL1500_.jpg', skill: 'handyman', price_per_day: 3000000, description: 'TAn astromech droid that has various useful functions. He has been on countless journeys, usually paired with C-3PO.', user_id: tom.id)
+r2d2 = Alien.new(name: "R2-D2", image: 'https://images-na.ssl-images-amazon.com/images/I/712Lwo7hMoL._SL1500_.jpg', skill: 'handyman', price_per_day: 3000000, description: 'An astromech droid that has various useful functions. He has been on countless journeys, usually paired with C-3PO.', user_id: tom.id)
 
 r2d2.save
+
+chewbecca = Alien.new(name: "Chewbecca", image: 'https://images-na.ssl-images-amazon.com/images/I/712Lwo7hMoL._SL1500_.jpg', skill: 'hariy hugs', price_per_day: 3000000, description: 'Chewbacca is a Wookiee from the forest planet of Kashyyk. Born 200 years before the Battle of Yavin. Chewbacca was the son of Attichitcuk. Growing up, Chewbacca was known for his sense of adventure, always exploring different parts of his homeworld, including the dangerous Shadowlands. ', user_id: sarah.id)
+
+chewbecca.save
+
+leia = Alien.new(name: "Princess Leia", image: 'https://i.pinimg.com/originals/36/4d/03/364d03a9747b410bd5ec88f98f8a1e01.jpg', skill: 'achieve nerdy boys fantasy', price_per_day: 6000000, description: 'Leia Organa grew to be an intelligent, headstrong, and fiery young woman with a natural gift for leadership and politics. She also proved adept at combat, developing a keen understanding of battle strategy and honing her blaster skills to the point where she almost never missed her target.', user_id: tom.id)
+
+leia.save
+
+jabba = Alien.new(name: "Jabba the Hutt", image: 'https://vafloc02.s3.amazonaws.com/isyn/images/f901/img-2406901-f.jpg', skill: 'intimidate naughty children', price_per_day: 3000000, description: 'Jabba is known as a Hutt, a slug like species that originated on the planet of Varl. Jabba was one of the most notorious Hutt crime lords in the galaxy, who governed a large criminal empire located in the Outer Rim. ', user_id: kaki.id)
+
+jabba.save
+
+kit_fisto = Alien.new(name: "Kit Fisto", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNSVDXpyBo4O8ngtlH4nvXX7c3vl5OjnEODuaMAty8dSBRNw2G&s', skill: 'heart-melting smile', price_per_day: 3000000, description: 'Kit Fisto was a renowned Nautolan Jedi Master in the waning years of the Galactic Republic. He is best known for his friendly smile.', user_id: tom.id)
+
+kit_fisto.save
 
 3.times do
   booking = Booking.new(
