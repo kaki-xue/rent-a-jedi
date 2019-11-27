@@ -1,0 +1,17 @@
+<h1>Rent a Jedi</h1>
+<% @aliens.all.each do |alien| %>
+<ul>
+
+
+<li><h3>name: <%= alien.name  %></h3>  </li>
+<li>id: <%= alien.id  %></li>
+<li>user_id: <%= alien.user_id  %></li>
+
+<li>skill: <%= alien.skill  %> </li>
+
+<li>description: <%= alien.description  %> </li>
+
+<li>imageurl: <%= alien.image  %></li>
+</ul>
+<% end %>
+
