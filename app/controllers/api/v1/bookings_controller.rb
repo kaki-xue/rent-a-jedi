@@ -41,7 +41,7 @@ before_action :set_booking, only: [:show, :update, :destroy]
   end
 
   def booking_params
-    params.require(:booking).permit(:name, :image, :skill, :price_per_day, :description)
+    params.require(:booking).permit(:start_date, :end_date, :user_id, :alien_id)
   end
 
   def render_error
