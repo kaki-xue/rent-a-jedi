@@ -33,7 +33,7 @@ before_action :set_user, only: [:show, :destroy]
   end
 
   def user_params
-    params.require(:user).permit(:name, :image, :skill, :price_per_day, :description)
+    params.require(:user).permit(:open_id)
   end
 
   def render_error
