@@ -16,15 +16,19 @@ before_action :set_booking, only: [:show, :update, :destroy]
 
   def create
     @booking = Booking.new(booking_params)
-    if @booking.save
-      render :show, status: :created
+    @alien = Alien.find(@booking.alien_id)
+    if @booking.user == @alien.user
+        render_unbookable
     else
-      render_error
+      if @booking.save
+        render :show, status: :created
+      else
+        render_error
+      end
     end
   end
 
   def update
-
     if @booking.save
       render :show, status: :created
     else
@@ -51,6 +55,10 @@ before_action :set_booking, only: [:show, :update, :destroy]
   def render_error
     render json: { errors: @booking.errors.full_messages },
       status: :unprocessable_entity
+  end
+
+  def render_unbookable
+    render json: { errors: 'You own that alien ! You stupid :D' }
   end
 
 end
