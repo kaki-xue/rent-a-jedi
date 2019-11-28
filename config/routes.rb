@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :show, :create, :destroy] do
         resources :bookings, only: [:index, :show]
+        resources :aliens, only: [:index, :show, :destroy, :create]
       end
     end
   end

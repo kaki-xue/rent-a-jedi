@@ -1,17 +1,22 @@
 class Api::V1::AliensController < Api::V1::BaseController
 
-before_action :set_alien, only: [:show, :destroy]
 
   def index
-   @aliens = Alien.all
+    if params[:user_id].nil?
+      @aliens = Alien.all
+    else
+      @aliens = Alien.where(user_id: params[:user_id])
+    end
   end
 
   def show
-
+    @alien = Alien.find(params[:id])
   end
 
   def create
     @alien = Alien.new(alien_params)
+    @user = User.find(params[:user_id])
+    @alien.user_id = @user.id
     if @alien.save
       render :show, status: :created
     else
@@ -20,16 +25,13 @@ before_action :set_alien, only: [:show, :destroy]
   end
 
   def destroy
+    @alien = Alien.find(params[:id])
     @alien.destroy
     head :no_content
     # No need to create a `destroy.json.jbuilder` view
   end
 
   private
-
-  def set_alien
-    @alien = Alien.find(params[:id])
-  end
 
   def alien_params
     params.require(:alien).permit(:name, :image, :skill, :price_per_day, :description)
@@ -39,5 +41,4 @@ before_action :set_alien, only: [:show, :destroy]
     render json: { errors: @alien.errors.full_messages },
       status: :unprocessable_entity
   end
-
 end
