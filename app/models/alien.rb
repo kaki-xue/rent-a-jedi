@@ -8,7 +8,7 @@ class Alien < ApplicationRecord
   validates :skill, presence: true
   validates :price_per_day, presence: true
   validates :description, presence: true
-  validates :description, length: { maximum: 500 }
+  validates :description, length: { maximum: 50 }
 
   include PgSearch::Model
   pg_search_scope :search_by_name_skill_and_description,
