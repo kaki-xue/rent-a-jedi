@@ -11,8 +11,8 @@ class Alien < ApplicationRecord
   validates :description, length: { maximum: 50 }
 
   include PgSearch::Model
-  pg_search_scope :search_by_name_skill_and_description,
-    against: %i[name skill description],
+  pg_search_scope :search_by_name_skill,
+    against: %i[name skill],
     using: {
       tsearch: { prefix: true }
     }
