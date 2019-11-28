@@ -6,9 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+Booking.destroy_all
 Alien.destroy_all
 User.destroy_all
-Booking.destroy_all
 
 sarah = User.new(open_id: "sarah")
 sarah.save
@@ -55,7 +56,7 @@ r2d2.save
 3.times do
   booking = Booking.new(
   user_id: [sarah.id, tom.id, kaki.id].sample,
-  alien_id: [yoda.id, kaki.id, yoda.id].sample,
+  alien_id: [yoda.id, jabba.id, luke.id].sample,
   start_date: ["2019-11-03", "2019-11-07", "2019-11-08"].sample,
   end_date: ["2019-11-09", "2019-11-10", "2019-11-11"].sample
 )
