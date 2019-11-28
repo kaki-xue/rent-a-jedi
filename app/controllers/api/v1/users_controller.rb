@@ -5,6 +5,7 @@ before_action :set_user, only: [:show, :destroy]
   def index
    @users = User.all
 
+
   end
 
   def show
