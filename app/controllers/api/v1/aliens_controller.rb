@@ -2,10 +2,14 @@ class Api::V1::AliensController < Api::V1::BaseController
 
 
   def index
-    if params[:user_id].nil?
-      @aliens = Alien.all
+    if params[:query].nil?
+      if params[:user_id].nil?
+        @aliens = Alien.all
+      else
+        @aliens = Alien.where(user_id: params[:user_id])
+      end
     else
-      @aliens = Alien.where(user_id: params[:user_id])
+      @aliens = Alien.search_by_name_skill_and_description(params[:query])
     end
   end
 
