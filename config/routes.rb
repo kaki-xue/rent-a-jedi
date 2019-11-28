@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :show, :create, :destroy] do
         resources :bookings, only: [:index, :show]
+
+
         resources :aliens, only: [:index, :show, :destroy, :create]
       end
     end
@@ -21,7 +23,9 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :bookings, only: [:index, :show, :update, :create, :destroy]
+      resources :bookings, only: [:index, :show, :update, :create, :destroy] do
+         resources :aliens, only: [:index, :show]
+      end
     end
   end
 end

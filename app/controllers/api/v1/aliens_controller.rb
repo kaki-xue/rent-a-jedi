@@ -14,7 +14,14 @@ class Api::V1::AliensController < Api::V1::BaseController
   end
 
   def show
-    @alien = Alien.find(params[:id])
+
+      if params[:booking_id].nil?
+        @alien = Alien.find(params[:id])
+      else
+        @booking = Booking.where(id: params[:booking_id])
+        @alien = @booking.alien
+      end
+
   end
 
   def create
