@@ -9,7 +9,7 @@ class Api::V1::AliensController < Api::V1::BaseController
         @aliens = Alien.where(user_id: params[:user_id])
       end
     else
-      @aliens = Alien.search_by_name_skill_and_description(params[:query])
+      @aliens = Alien.search_by_name_skill(params[:query])
     end
   end
 
