@@ -42,7 +42,19 @@ while  i < 16
     image: json["image"],
     skill: "#{json["species"]} ",
     price_per_day: [3000, 4000, 5000, 6000, 7000, 3500, 5500].sample,
-    description: "a #{json["height"]} meter tall #{json["gender"]}, has #{json["hairColor"]} hair, #{json["eyeColor"]} eyes with #{["attractive", "charming", "confusing","exagerating", "cool"].sample} #{json["skinColor"]} skin color",
+    description: "a #{json["height"]} meter tall #{json["gender"]}, has #{json["hairColor"]} hair, #{json["eyeColor"]} eyes with #{["attractive", "charming", "confusing","exagerating", "cool"].sample} #{json["skinColor"]} skin color
+    .. #{[
+    "really really good at doing a product pitch",
+    "extremely good at walking the dogs",
+    "really good at pickup lines",
+    "a very good match maker",
+    "farts loudly!!!",
+    "a horrible horrible drinking buddy",
+    "brushes their teethes while shaving",
+    "can open a beer bottle with their nose",
+    "has the attention span of a ... wait what was that again?",
+    "fiddles a little too much",
+    "billy no mates"].sample}",
     user_id: [sarah.id, tom.id, kaki.id, pavel.id, maria.id].sample
     )
   alien.save!
