@@ -2,7 +2,7 @@ class Api::V1::AliensController < Api::V1::BaseController
 
 
   def index
-    if params[:query].nil?
+    if params[:query].nil? or params[:query] == ""
       if params[:user_id].nil?
         @aliens = Alien.all
       else
